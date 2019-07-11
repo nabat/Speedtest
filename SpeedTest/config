@@ -4,5 +4,5 @@
 );
 
 %USER_FUNCTION_LIST = (
-  "01:0:$lang{SPEEDTEST}:open_st:"                      => 45,
+  "01:0:$lang{SPEEDTEST}:open_st:"               => 0,
 );
