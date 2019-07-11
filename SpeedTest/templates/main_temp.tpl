@@ -55,7 +55,7 @@
     var ggdl, ggul, ggping;
 
     function runTest() {
-        w = new Worker('/images/speedtest/speedtest_worker.min.js')
+        w = new Worker('/images/test_data/speedtest_worker.min.js')
         var interval = setInterval(function () {
             w.postMessage('status')
         }, 100)
