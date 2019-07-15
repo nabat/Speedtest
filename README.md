@@ -14,7 +14,7 @@
 #### Установка:
 Папку **SpeedTest** перемістити в /usr/abills/Abills/modules/
 
-В терміналі ввести ```sudo ln -s /usr/abills/Abills/modules/Speedtest/speedtest_api /usr/abills/Abills/templates/speedtest_api```
+В терміналі ввести ```sudo ln -s /usr/abills/Abills/modules/Speedtest/speedtest_api /usr/abills/Abills/templates/speedtest_api``` та ``` cpan install Crypt::OpenSSL::Random ```.
 
 
 В файлі **config.pl**:
@@ -23,7 +23,6 @@
              'SPEEDTEST'
            );
 ```
-В терміналі ввести ``` cpan install Crypt::OpenSSL::Random ```.
 
 Для роботи з модулем потрібно виконати установку яка наведена вище. Після установки в кабінеті користувача відобразиться вкладка "Тест швидкості". При натисненні на дану вкладку відобразиться інтерфейс модуля. Для початку тесту потрібно натиснути на кнопку "Почати". Швидкість Download та Upload відображається в Мегабіт/секунду, а швидкість Ping та Jitter в мілісекундах. 
 
