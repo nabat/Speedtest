@@ -14,7 +14,8 @@
 #### Установка:
 Папку **SpeedTest** перемістити в /usr/abills/Abills/modules/
 
-Папку **speedtest_api** перемістити в /usr/abills/Abills/templates/
+В терміналі ввести ```sudo ln -s /usr/abills/Abills/modules/Speedtest/speedtest_api /usr/abills/Abills/templates/speedtest_api```
+
 
 В файлі **config.pl**:
 ```
