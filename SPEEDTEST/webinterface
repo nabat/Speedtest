@@ -1,0 +1,34 @@
+#!perl
+
+=head1 NAME
+
+  SpeedTest
+
+=cut
+
+use strict;
+use warnings;
+use parent 'dbcore';
+
+our ($html, %FORM, $db, %conf, $admin, %lang, $index);
+
+#**********************************************************
+
+=head2 open_st() - SpeedTest
+
+=cut
+
+#**********************************************************
+sub open_st {
+
+  $html->tpl_show(_include('speedtest_main','SPEEDTEST'),{
+    IP        => $ENV{REMOTE_ADDR},
+    YOUR_IP   => $lang{YOUR_IP},
+    BTN_START => $lang{BTN_START},
+    BTN_STOP  => $lang{BTN_STOP},
+  });
+  return 1;
+}
+
+1;
+
