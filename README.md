@@ -1,7 +1,6 @@
-# SPEEDTEST
+# Speedtest
 #### Даний модуль вимірює швидкість інтернету
 #### Опис
-В папці **SpeedTest** знаходиться модуль.
 
 В папці **speedtest_api** знаходиться API для модуля.
 
@@ -12,7 +11,7 @@
 - speedtest_worker.js - файл з інтерфейсом.
 
 #### Установка:
-Папку **SpeedTest** перемістити в /usr/abills/Abills/modules/
+Каталог модуля перемістити в /usr/abills/Abills/modules/
 
 В терміналі ввести ```sudo ln -s /usr/abills/Abills/modules/Speedtest/speedtest_api /usr/abills/Abills/templates/speedtest_api``` та ``` cpan install Crypt::OpenSSL::Random ```.
 
@@ -20,7 +19,7 @@
 В файлі **config.pl**:
 ```
 @MODULES = (
-             'SPEEDTEST'
+             'Speedtest'
            );
 ```
 
