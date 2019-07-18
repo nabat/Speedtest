@@ -55,7 +55,7 @@
     var ggdl, ggul, ggping;
 
     function runTest() {
-        w = new Worker('/images/speedtest_api/speedtest_worker.min.js')
+        w = new Worker('/speedtest_api/speedtest_worker.min.js')
         var interval = setInterval(function () {
             w.postMessage('status')
         }, 100)
@@ -68,6 +68,7 @@
             var ulStatus = data[2];
             var pingStatus = data[3];
             console.log(data[4]);
+            document.getElementById('ip').textContent = '%YOUR_IP%: ' + data[4]
             var jitterStatus = data[5];
             if (status >= 4) {
                 clearInterval(interval)
@@ -82,7 +83,7 @@
 
             console.log(data);
         }
-        w.postMessage('start {"time_ul": "10", "time_dl": "10", "count_ping": "50", "url_dl": "garbage.cgi", "url_ul": "empty.cgi", "url_ping": "empty.cgi", "url_getIp": "getIP.cgi"}')
+        w.postMessage('start {"time_ul": "10", "time_dl": "10", "count_ping": "50", "url_dl": "garbage.cgi", "url_ul": "empty.cgi", "url_ping": "empty.cgi", "url_getIp": "get_ip.cgi"}')
     }
 
     function abortTest() {
@@ -182,7 +183,7 @@
     <div class="meter" id="ggping"></div>
     <div class="meter" id="ggjitter"></div>
 </div>
-<div id="ip">%YOUR_IP%: <span>%IP%</span></div>
+<div id="ip"></div> <!--%YOUR_IP%: <span>%IP%</span>-->
 <div id="button_st">
     <a href="javascript:runTest()" id="startBtn" class="button">%BTN_START%</a>
     <a href="javascript:abortTest()" id="abortBtn" class="button" style="display:none;">%BTN_STOP%</a>

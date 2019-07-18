@@ -23,7 +23,7 @@ var settings = {
   url_dl: 'garbage.cgi', // path to a large file or garbage.php, used for download test. must be relative to this js file
   url_ul: 'empty.cgi', // path to an empty file, used for upload test. must be relative to this js file
   url_ping: 'empty.cgi', // path to an empty file, used for ping test. must be relative to this js file
-  url_getIp: 'getIP.cgi', // path to getIP.php relative to this js file, or a similar thing that outputs the client's ip
+  url_getIp: 'get_ip.cgi', // path to getIP.php relative to this js file, or a similar thing that outputs the client's ip
   xhr_dlMultistream: 10, // number of download streams to use (can be different if enable_quirks is active)
   xhr_ulMultistream: 3, // number of upload streams to use (can be different if enable_quirks is active)
   xhr_ignoreErrors: 1, // 0=fail on errors, 1=attempt to restart a stream if it fails, 2=ignore all errors

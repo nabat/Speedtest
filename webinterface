@@ -21,7 +21,6 @@ our ($html, %FORM, $db, %conf, $admin, %lang, $index);
 sub open_st {
 
   $html->tpl_show(_include('speedtest_main','Speedtest'),{
-    IP        => $ENV{REMOTE_ADDR},
     YOUR_IP   => $lang{YOUR_IP},
     BTN_START => $lang{BTN_START},
     BTN_STOP  => $lang{BTN_STOP},
