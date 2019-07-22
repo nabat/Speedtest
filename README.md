@@ -13,7 +13,8 @@
 #### Установка:
 Каталог модуля перемістити в /usr/abills/Abills/modules/
 
-В терміналі ввести ```sudo ln -s /usr/abills/Abills/modules/Speedtest/speedtest_api /usr/abills/cgi-bin/``` та ``` cpan install Crypt::OpenSSL::Random ```.
+В терміналі ввести ```sudo ln -s /usr/abills/Abills/modules/Speedtest/speedtest_api /usr/abills/cgi-bin/```, 
+```sudo apt install libssl-dev``` та ``` cpan install Crypt::OpenSSL::Random ```.
 
 
 В файлі **config.pl**:
