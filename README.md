@@ -5,15 +5,15 @@
 В папці **speedtest_api** знаходиться API для модуля.
 
 ##### speedtest_api:
-- garbage.pl - файл для тесту завантаження.
-- empty.pl - файл для тесту відвантаження та пінгу.
-- getIp.pl - файл для отримання IP.
+- garbage.cgi - файл для тесту завантаження.
+- empty.cgi - файл для тесту відвантаження та пінгу.
+- get_ip.cgi - файл для отримання IP.
 - speedtest_worker.js - файл з інтерфейсом.
 
 #### Установка:
 Каталог модуля перемістити в /usr/abills/Abills/modules/
 
-В терміналі ввести ```sudo ln -s /usr/abills/Abills/modules/Speedtest/speedtest_api /usr/abills/Abills/templates/speedtest_api``` та ``` cpan install Crypt::OpenSSL::Random ```.
+В терміналі ввести ```sudo ln -s /usr/abills/Abills/modules/Speedtest/speedtest_api /usr/abills/cgi-bin/``` та ``` cpan install Crypt::OpenSSL::Random ```.
 
 
 В файлі **config.pl**:
