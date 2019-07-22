@@ -5,9 +5,9 @@ use Crypt::OpenSSL::Random;
 use CGI;
 my $c;
 $c = CGI->new();
+
 my $data = Crypt::OpenSSL::Random::random_pseudo_bytes(1048576);
 my $chunks;
-
 
   print "Content-Type: text/html\n\n";
 
