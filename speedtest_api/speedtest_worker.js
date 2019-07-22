@@ -63,7 +63,7 @@ this.addEventListener('message', function (e) {
     postMessage(testStatus + ';' + dlStatus + ';' + ulStatus + ';' + pingStatus + ';' + clientIp + ';' + jitterStatus)
   }
   if (params[0] === 'start' && testStatus === 0) { // start new test
-    testStatus = 1
+    testStatus = 2
     try {
       // parse settings, if present
       var s = {}
@@ -107,7 +107,8 @@ this.addEventListener('message', function (e) {
     } catch (e) { console.warn("Possible error in custom test settings. Some settings may not be applied. Exception: "+e) }
     // run the tests
     console.log(settings)
-    getIp(function () { dlTest(function () { testStatus = 2; pingTest(function () { testStatus = 3; ulTest(function () { testStatus = 4 }) }) }) })
+
+    getIp(function () {pingTest(function () {testStatus = 1;dlTest(function () {testStatus = 3;ulTest(function () {testStatus = 4})})})})
   }
   if (params[0] === 'abort') { // abort command
     clearRequests() // stop all xhr activity

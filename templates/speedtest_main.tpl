@@ -1,53 +1,3 @@
-<style type="text/css">
-
-    div.meter {
-        display: inline-block;
-        height: 170px;
-        width: 250px;
-        text-align: center;
-        font-size: 6vw;
-    }
-
-    div#testArea {
-        display: flex;
-        justify-content: center;
-        flex-flow: row wrap;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    .button {
-        display: inline-block;
-        margin: 10px 5px 0 2px;
-        padding: 16px 40px;
-        border-radius: 5px;
-        font-size: 18px;
-        border: none;
-        background: #34aadc;
-        color: white;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-family: 'Sans';
-    }
-
-    #ip {
-        display: flex;
-        justify-content: center;
-        flex-flow: row wrap;
-        margin: 1em 0;
-        font-weight: 600;
-        font-size: 1.4em;
-    }
-
-    #button_st {
-        display: flex;
-        justify-content: center;
-        flex-flow: row wrap;
-    }
-</style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.2.2/justgage.min.js"></script>
 <script type="text/javascript">
@@ -55,7 +5,7 @@
     var ggdl, ggul, ggping;
 
     function runTest() {
-        w = new Worker('/speedtest_api/speedtest_worker.min.js')
+        w = new Worker('/speedtest_api/speedtest_worker.js')
         var interval = setInterval(function () {
             w.postMessage('status')
         }, 100)
@@ -177,14 +127,19 @@
 </script>
 
 
-<div id="testArea">
-    <div class="meter" id="ggdl"></div>
-    <div class="meter" id="ggul"></div>
-    <div class="meter" id="ggping"></div>
-    <div class="meter" id="ggjitter"></div>
-</div>
-<div id="ip"></div> <!--%YOUR_IP%: <span>%IP%</span>-->
-<div id="button_st">
-    <a href="javascript:runTest()" id="startBtn" class="button">%BTN_START%</a>
-    <a href="javascript:abortTest()" id="abortBtn" class="button" style="display:none;">%BTN_STOP%</a>
+<div class="container-fluid">
+    <div class="row text-center">
+      <div class="col-12 col-sm-10 col-md-6 col-lg-6" id="ggdl"></div>
+      <div class="col-12 col-sm-10 col-md-6 col-lg-6" id="ggul"></div>
+      <div class="col-12 col-sm-10 col-md-6 col-lg-6" id="ggping"></div>
+      <div class="col-12 col-sm-10 col-md-6 col-lg-6" id="ggjitter"></div>
+    </div>
+    <div>
+      <div class="row text-center">
+        <div id="ip" class="h4"></div> <!--%YOUR_IP%: <span>%IP%</span>-->
+            <a href="javascript:runTest()" id="startBtn" class="btn btn-primary btn-lg" style="width:140px">%BTN_START%</a>
+            <a href="javascript:abortTest()" id="abortBtn" class="btn btn-primary btn-lg" style="display:none; width:140px">%BTN_STOP%</a>
+        </div>
+    </div>
+
 </div>

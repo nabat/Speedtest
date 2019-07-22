@@ -2,7 +2,16 @@
 
 =head1 NAME
 
-  SpeedTest
+  Speedtest
+
+=head2 SYNOPSIS
+
+  This package for measuring the speed of the Internet
+
+=head2 VERSION
+
+  VERSION: 1.00
+  REVISION: 22.07.2019
 
 =cut
 
@@ -29,4 +38,3 @@ sub open_st {
 }
 
 1;
-
